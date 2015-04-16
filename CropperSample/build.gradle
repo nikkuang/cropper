@@ -5,15 +5,12 @@ dependencies {
 }
 
 android {
-
-    compileSdkVersion 19
-    buildToolsVersion "19.1"
-
+    compileSdkVersion 17
+    buildToolsVersion '19.1.0'
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 19
+        targetSdkVersion 17
     }
-
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -24,5 +21,10 @@ android {
             res.srcDirs = ['res']
             assets.srcDirs = ['assets']
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_7
     }
 }
